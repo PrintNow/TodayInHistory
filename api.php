@@ -75,13 +75,13 @@ if ($result->num_rows > 0) {
     }
 }
 
-die(json_encode([
+echo json_encode([
     'code' => 200,
     'msg' => 'ok',
     'count' => count($res),
     'disclaimer' => '数据源于“维基百科”，经过加工后为您呈现本数据，数据采集于 2020/04/12 12:00，在此之后一些数据可能发生了改变，请以事实为准！本站不承担任何因数据改变而造成的任何责任',
     'data' => $res,
-]));
+]);
 
 
 $conn->close();//关闭数据库连接

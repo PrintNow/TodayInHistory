@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>历史上的今天 - Demo</title>
+    <link rel="stylesheet" href="./static/style.css"/>
+</head>
+<body>
+
+<h1>历史上的今天 - Web 演示版</h1>
+
+<blockquote>
+    <ul>
+        <li>本项目 GitHub 链接：<a target="_blank" href="https://github.com/PrintNow/TodayInHistory">https://github
+            .com/PrintNow/TodayInHistory</a></li>
+        <li>此页面基于 <a target="_blank" href="https://github.com/PrintNow/TimeLine">PrintNow/TimeLine</a> 修改
+        </li>
+        <li>本页面数据是调用了我提供的 <a href="https://api.nowtime.cc/v1/today_in_history" target="_blank">API</a>
+            进行渲染的，只为了大家测试使用，具体还要你自己去部署 服务端(PHP)/本地端 代码
+            <ul>
+                <li>MySQL 数据库文件：<a href="https://github.com/PrintNow/TodayInHistory/blob/master/history_in_today.sql"
+                target="_blank">history_in_today.sql</a></li>
+                <li>JSON 数据文件：<a href="https://github.com/PrintNow/TodayInHistory/blob/master/history_in_today.sql"
+                target="_blank">history_in_today.json</a></li>
+            </ul>
+        </li>
+        <li>红色：大事件 | 紫色：出生 | 黑色：逝世</li>
+    </ul>
+</blockquote>
+
+<ul class="time-line">
+    <li class="tl-header start">
+        <h2>数据正在加载中，请稍后...</h2>
+    </li>
+</ul>
+
+<script src="./static/jquery.min.js"></script>
+<script src="./static/script.js"></script>
+</body>
+</html>

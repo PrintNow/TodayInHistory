@@ -1,7 +1,7 @@
 # 🕘 TodayInHistory | 历史上的今天
 历史上的今天数据库，数据源于“维基百科”，演示地址：[https://api.nowtime.cc/today_in_history.html](https://api.nowtime.cc/today_in_history.html)
 
-## 说一下爬虫思路
+## 💬 说一下爬虫思路
 1. 先下载 `https://zh.wikipedia.org/wiki/1月1日` 
 到 `https://zh.wikipedia.org/wiki/12月31日` 366天的页面（我用了 3分钟 左右全部下载完成）
 2. 然后写代码（~~用的世界上最好的语言~~ PHP）进行数据清洗，这步我花了好久，大概两三个小时（惭愧惭愧，水平有限😑）
@@ -16,7 +16,7 @@
 > 我准备了两份数据 [history_in_today.sql](history_in_today.sql) 和 [history_in_today.json](history_in_today.json)
 > 你可以随意发挥，或使用我写好的，如下👇
 
-1. 准备一个 PHP 环境
+1. 🐘 准备一个 PHP 环境
 2. [下载源码](https://github.com/PrintNow/TodayInHistory/archive/master.zip)，解压后**放置网站根目录**
 3. 将 `history_in_today.sql` 导入 `MySQL 数据库`
 4. 配置好数据库信息，在 `api.php` 第 14~17 行
@@ -27,7 +27,19 @@
 # 🖼 截图
 ![历史上的今天 截图](历史上的今天.png)
 
-# API 字段说明
+# ⌨ API 字段说明
+## 🥁 请求
+> 使用 GET 方法请求 `/api.php`
+>
+> 例子，获取*1月1日*，降序排序：`/api.php?month=1&day=1&order=asc`
+
+|字段|说明|
+|---|---|
+|month|月份。默认值是本月，你可以输入 1~12 |
+|day|日期。默认值是今天，你可以输入 1~31 |
+|order|排序方式。根据 **年份**排序，默认值是 `desc` 降序（从大到小），你可以输入 `desc` 或 `asc` |
+
+## ◀ 返回
 |字段|类型|说明|
 |---|---|---|
 |code|int|[必有] 状态码，正常返回 `200`，其它包括数据不存在都返回如 500、-1|
